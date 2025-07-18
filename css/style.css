@@ -30,6 +30,10 @@ body {
 .text-light-gray {
   color: #727272;
 }
+/* primary color */
+.text-primary {
+  color: #ff900e;
+}
 /* bg-light */
 .bg-light {
   background: #ff900e1a;
@@ -51,14 +55,27 @@ main {
   max-width: 1440px;
   margin: 0 auto;
 }
+.section-title {
+  font-size: 2.8125rem;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: 0%;
+  margin-bottom: 24px;
+}
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: left;
+}
 
 /* header style */
-
-/* navbar related style */
 header {
   padding-top: 50px;
   padding-bottom: 45px;
 }
+/* navbar related style */
 .navbar,
 .banner {
   max-width: 1440px;
@@ -116,27 +133,87 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
-.our-features {
+.our-team {
   margin-left: 130px;
   max-width: 530px;
 }
-.featured-title {
-  font-size: 2.8125rem;
-  font-weight: 700;
-  line-height: 53px;
-  letter-spacing: 0%;
-  text-align: left;
-}
+
 #quick-list {
   font-weight: 500;
 }
+.team-description {
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+/* fect related style */
+.facts{
+   margin: 180px auto;
+}
+.fact-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.fact-description{
+  max-width: 540px;
+  margin-bottom: 100px;
+}
+.fact-card {
+  box-sizing: border-box;
+  border: 1px solid #ff900e;
+  border-radius: 8px;
+  width: 240px;
+  height: 240px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.fact-number {
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.fact-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0%;
+  margin-top: 10px;
+}
+
+/* sponsor area */
 
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links,
+  .teams {
     flex-direction: column;
   }
   .navbar {
     gap: 30px;
+  }
+
+  /* team & featured */
+  .team-img-container,.fact-container {
+    grid-template-columns: 1fr;
+  }
+  .our-team {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  /* fact area style */
+  .fact-container{
+    justify-items: center;
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .our-team {
+    margin: 0 auto;
+    margin-top: 50px;
   }
 }
