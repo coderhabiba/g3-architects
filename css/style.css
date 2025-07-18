@@ -145,16 +145,89 @@ header {
   text-align: left;
   margin-bottom: 32px;
 }
+/* featured area */
+.featured {
+  justify-content: center;
+  align-items: center;
+  gap: 145px;
+}
+.featured-content-header {
+  width: 586px;
+}
+.featured-content-header h3 {
+  position: relative;
+  margin-left: 20px;
+}
+.featured-content-header h3::before {
+  width: 5px;
+  height: 106px;
+  content: ' ';
+  background-color: #ff900e;
+  display: inline-block;
+  position: absolute;
+  right: 102%;
+}
+.featured-content-main {
+  margin-top: 30px;
+  width: 586px;
+}
+.featured-box {
+  padding: 30px;
+  padding-right: 42px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  background: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+.featured-box-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.featured-imgs{
+  position: relative;
+}
+.featured-imgs img {
+  width: 708px;
+  height: 982px;
+  border-radius: 8px;
+}
+.experience {
+  width: 342px;
+  height: 200px;
+  color: #ffffff;
+  padding: 45px 42px;
+  background-color: #ff900e;
+  border-radius: 8px;
+  position: absolute;
+  top: 87.5%;
+  left: -15%;
+}
+.experience h3 {
+  font-weight: 700;
+  font-size: 65px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.experience p{
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: 0%;
+  text-align: center;
+}
 
 /* fect related style */
-.facts{
-   margin: 180px auto;
+.facts {
+  margin: 180px auto;
 }
 .fact-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.fact-description{
+.fact-description {
   max-width: 540px;
   margin-bottom: 100px;
 }
@@ -182,6 +255,19 @@ header {
 }
 
 /* sponsor area */
+.sponsor h3,
+.sponsor p {
+  text-align: center;
+}
+.sponsor-logos {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  margin-bottom: 130px;
+  align-items: center;
+  justify-items: center;
+}
 
 @media screen and (max-width: 576px) {
   .navbar,
@@ -194,18 +280,58 @@ header {
   }
 
   /* team & featured */
-  .team-img-container,.fact-container {
+  .team-img-container,
+  .fact-container {
     grid-template-columns: 1fr;
   }
   .our-team {
     margin-left: 20px;
     margin-top: 20px;
   }
+  /* featured */
+  .featured-content-header {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .featured {
+    flex-direction: column;
+  }
+  .featured-content-header,
+  .featured-content-header p,
+  .featured-content-main {
+    width: 80%;
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .featured-content-header p {
+    margin-bottom: 20px;
+  }
+  .featured-imgs {
+    margin: 0 auto;
+  }
+  .featured-imgs img {
+    width: 350px;
+    height: 600px;
+  }
 
   /* fact area style */
-  .fact-container{
+  .fact-container {
     justify-items: center;
     gap: 24px;
+  }
+  .facts h3,
+  .facts > p {
+    text-align: center;
+  }
+
+  /* sponsor */
+  .sponsor-logos {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .sponsor-logos {
+    gap: 50px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -215,5 +341,59 @@ header {
   .our-team {
     margin: 0 auto;
     margin-top: 50px;
+  }
+  .team-img-container,
+  .fact-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* featured */
+  .featured-content-header {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .featured {
+    flex-direction: column;
+  }
+  .featured-content-header,
+  .featured-content-header p,
+  .featured-content-main {
+    width: 90%;
+    justify-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .featured-content-header p {
+    margin-bottom: 20px;
+  }
+  .featured-imgs {
+    margin: 0 auto;
+  }
+  .featured-imgs img {
+    width: 550px;
+    height: 800px;
+  }
+
+  /* fact area */
+  .fact-container {
+    justify-items: center;
+    gap: 10px;
+  }
+  .fact-card {
+    width: 98%;
+  }
+  .facts {
+    text-align: center;
+    justify-items: center;
+  }
+  .facts > p {
+    text-align: center;
+  }
+
+  /* sponsor area */
+  .sponsor-logos {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
   }
 }
